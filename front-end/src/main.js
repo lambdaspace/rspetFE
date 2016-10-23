@@ -1,9 +1,23 @@
 import Vue from 'vue'
 import App from './App'
 
-/* eslint-disable no-new */
+import VueRouter from 'vue-router'
+import VueResource from 'vue-resource'
+import HostsList from 'components/HostsList.vue'
+
+Vue.use(VueResource)
+Vue.use(VueRouter)
+
+const routes = [
+  { path: '/', component: HostsList }
+]
+
+const router = new VueRouter({
+  routes // short for routes: routes
+})
+
 new Vue({
   el: '#app',
-  template: '<App/>',
-  components: { App }
+  render: h => h(App),
+  router
 })
