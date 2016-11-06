@@ -1,6 +1,7 @@
 <template>
-  <div class="hosts">
-    <div class="container">
+  <div class="hosts col-md-3">
+    <div class="">
+      <h2 class='text-center'>Hosts</h2>
       <ul>
         <li v-for="host in hosts">
           <input type="checkbox" /> {{ host.hostname }} - {{ host.ip }} - {{ host.port }}
@@ -32,5 +33,8 @@
 </script>
 
 <style>
-  .container { border:2px solid #ccc; width:300px; height: 200px; overflow-y: scroll; }
+  .hosts{
+    background-color: #CCC;
+    height: 100vh;
+  }
 </style>
