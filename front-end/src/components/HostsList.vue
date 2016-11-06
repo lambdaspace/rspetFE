@@ -5,7 +5,7 @@
         <h2 class='text-center'>Hosts</h2>
         <ul>
           <li v-for="host in hosts">
-            <input type="checkbox" /> {{ host.hostname }} - {{ host.ip }} - {{ host.port }}
+            <label><input type="checkbox" /> {{ host.hostname }} - {{ host.ip }} - {{ host.port }}</label>
           </li>
         </ul>
       </div>
