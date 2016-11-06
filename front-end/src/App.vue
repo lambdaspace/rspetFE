@@ -7,3 +7,23 @@
     </div>
   </div>
 </template>
+
+<style>
+  h2{
+    margin: 0;
+  }
+  .output{
+    color: #00CD00;
+    background-color: #000000;
+    height: 60vh;
+  }
+  .terminal{
+    color: #00CD00;
+    background-color: #000000;
+    height: 40vh;
+  }
+  .commands{
+    background-color: #CCC;
+    height: 100vh;
+  }
+</style>

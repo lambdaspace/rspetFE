@@ -10,13 +10,12 @@
         </ul>
       </div>
     </div>
-    <div class="output col-md-6">
-      <div class="">
+    <div class="hosts col-md-6">
+      <div class="output">
         <h2 class="text-center">Output</h2>
       </div>
-    </div>
-    <div class="terminal col-md-6">
-      <div class="">
+
+      <div class="terminal">
         <h2 class="text-center">Terminal</h2>
       </div>
     </div>
@@ -56,19 +55,5 @@
   }
   .hosts ul {
     list-style: none;
-  }
-  .output{
-    color: #00CD00;
-    background-color: #000000;
-    height: 60vh;
-  }
-  .terminal{
-    color: #00CD00;
-    background-color: #000000;
-    height: 40vh;
-  }
-  .commands{
-    background-color: #CCC;
-    height: 100vh;
   }
 </style>
