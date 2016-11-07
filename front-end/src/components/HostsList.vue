@@ -40,10 +40,14 @@
     },
     methods: {
       getHosts () {
-        this.$http.get('http://localhost:5000/rspet/api/v1.0/hosts').then((response) => {
+        this.$http.get('http://localhost:5000/rspet/api/v1.0/hosts')
+        .then((response) => {
           this.hosts = response.body.hosts
           console.log(this.hosts)
         })
+        .catch((response) => {
+          console.log(response);
+        });
       }
     }
   }
@@ -56,6 +60,7 @@
     width: 100%;
     border-radius: 25px;
     border: 2px solid #CCC;
+    padding-top: .5em;
   }
   .hosts ul {
     list-style: none;
