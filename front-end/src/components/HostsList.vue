@@ -1,7 +1,7 @@
 <template>
   <div class="root">
-    <div class="hosts col-md-3">
-      <div class="">
+    <div class="left-panel col-md-3">
+      <div class="hosts">
         <h2 class='text-center'>Hosts</h2>
         <ul>
           <li v-for="host in hosts">
@@ -10,17 +10,18 @@
         </ul>
       </div>
     </div>
-    <div class="hosts col-md-6">
+    <div class="mid-panel col-md-6">
       <div class="output">
         <h2 class="text-center">Output</h2>
       </div>
 
       <div class="terminal">
         <h2 class="text-center">Terminal</h2>
+        <input type="text">
       </div>
     </div>
-    <div class="commands col-md-3">
-      <div class="">
+    <div class="right-panel col-md-3">
+      <div class="commands">
         <h2 class="text-center">Commands</h2>
       </div>
     </div>
@@ -50,8 +51,11 @@
 
 <style>
   .hosts{
-    background-color: #CCC;
+    background-color: #a3a3a3;
     height: 100vh;
+    width: 100%;
+    border-radius: 25px;
+    border: 2px solid #CCC;
   }
   .hosts ul {
     list-style: none;
