@@ -1,30 +1,11 @@
 <template>
-  <div class="root">
-    <div class="left-panel col-md-3">
-      <div class="hosts">
-        <h2 class='text-center'>Hosts</h2>
-        <ul>
-          <li v-for="host in hosts">
-            <label><input type="checkbox" /> {{ host.hostname }} - {{ host.ip }} - {{ host.port }}</label>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="mid-panel col-md-6">
-      <div class="output">
-        <h2 class="text-center">Output</h2>
-      </div>
-
-      <div class="terminal">
-        <h2 class="text-center">Terminal</h2>
-        <input type="text">
-      </div>
-    </div>
-    <div class="right-panel col-md-3">
-      <div class="commands">
-        <h2 class="text-center">Commands</h2>
-      </div>
-    </div>
+  <div class="hosts">
+    <h2 class='text-center'>Hosts</h2>
+    <ul>
+      <li v-for="host in hosts">
+        <label><input type="checkbox" /> {{ host.hostname }} - {{ host.ip }} - {{ host.port }}</label>
+      </li>
+    </ul>
   </div>
 </template>
 

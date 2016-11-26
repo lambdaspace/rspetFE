@@ -2,11 +2,39 @@
   <div id="app">
     <div class="container-fluid">
       <div class='row'>
-        <router-view></router-view>
+        <div class="root">
+          <div class="left-panel col-md-3">
+            <host-list></host-list>
+          </div>
+          <div class="mid-panel col-md-6">
+            <output-view></output-view>
+            <terminal></terminal>
+          </div>
+          <div class="right-panel col-md-3">
+              <command-list></command-list>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+import HostsList from './components/HostsList.vue';
+import CommandList from './components/CommandList.vue';
+import Output from './components/Output.vue';
+import Terminal from './components/Terminal.vue';
+
+export default {
+  name: 'app',
+  components: {
+    'host-list': HostsList,
+    'command-list': CommandList,
+    'output-view': Output,
+    'terminal': Terminal
+  }
+}
+</script>
 
 <style>
   h2{
