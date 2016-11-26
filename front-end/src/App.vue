@@ -33,7 +33,7 @@
     color: #00CD00;
     background-color: #000000;
     height: 59vh;
-    border-radius: 25px;
+    border-radius: 5px;
     border: 2px solid #CCC;
     padding-top: .5em;
   }
@@ -41,7 +41,7 @@
     color: #00CD00;
     background-color: #000000;
     height: 39vh;
-    border-radius: 25px;
+    border-radius: 5px;
     border: 2px solid #CCC;
     padding-top: .5em;
     margin-top: 1vh;
@@ -54,7 +54,7 @@
   .commands{
     background-color: #a3a3a3;
     height: 100vh;
-    border-radius: 25px;
+    border-radius: 5px;
     border: 2px solid #CCC;
     padding-top: .5em;
   }

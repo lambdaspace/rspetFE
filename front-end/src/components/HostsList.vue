@@ -58,7 +58,7 @@
     background-color: #a3a3a3;
     height: 100vh;
     width: 100%;
-    border-radius: 25px;
+    border-radius: 5px;
     border: 2px solid #CCC;
     padding-top: .5em;
   }

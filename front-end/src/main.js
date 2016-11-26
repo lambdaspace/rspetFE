@@ -5,7 +5,7 @@ import App from './App';
 
 import VueRouter from 'vue-router';
 import VueResource from 'vue-resource';
-import HostsList from 'components/HostsList.vue';
+import HostsList from './components/HostsList.vue';
 
 Vue.use(VueResource);
 Vue.use(VueRouter);
