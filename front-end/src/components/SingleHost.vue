@@ -25,7 +25,6 @@
         this.$http.get('http://localhost:5000/rspet/api/v1.0/hosts')
         .then((response) => {
           this.hosts = response.body.hosts
-          console.log(this.hosts)
         })
         .catch((response) => {
           console.log(response);

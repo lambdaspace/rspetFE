@@ -9,15 +9,6 @@ import VueResource from 'vue-resource';
 
 Vue.use(VueResource);
 Vue.use(Vuex);
-// Vue.use(VueRouter);
-
-// const routes = [
-//   { path: '/', component: HostsList }
-// ];
-//
-// const router = new VueRouter({
-//   routes // short for routes: routes
-// });
 
 new Vue({
   el: '#app',

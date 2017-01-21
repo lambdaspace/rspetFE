@@ -2,36 +2,51 @@
   <div class="hosts">
     <h2 class='text-center'>Hosts</h2>
     <ul>
-      <li v-for="host in hosts">
-        <label><input type="checkbox" /> {{ host.hostname }} - {{ host.ip }} - {{ host.port }}</label>
+      <li v-for="(host, index) in hosts">
+        <label><input type="checkbox" name="host" :value="host.id" v-model="selectedHosts" /> {{ host.hostname }} - {{ host.ip }} - {{ host.port }}</label>
       </li>
     </ul>
   </div>
 </template>
 
 <script>
-  export default {
-    created () {
-      this.getHosts()
-    },
-    data () {
-      return {
-        hosts: {}
+import store from '../store'
+
+export default {
+  created () {
+    this.getHosts()
+  },
+  data () {
+    return {
+      hosts: {},
+      selectedHosts: []
+    }
+  },
+  methods: {
+    getHosts() {
+      this.$http.get('http://localhost:5000/rspet/api/v1.0/hosts')
+      .then((response) => {
+        this.hosts = response.body.hosts;
+      })
+      .catch((response) => {
+        console.log(response);
+      });
+    }
+  },
+  watch: {
+    selectedHosts: function(hosts) {
+      if (hosts.length === 0) {
+        store.commit('setHostState', "basic");
       }
-    },
-    methods: {
-      getHosts () {
-        this.$http.get('http://localhost:5000/rspet/api/v1.0/hosts')
-        .then((response) => {
-          this.hosts = response.body.hosts
-          console.log(this.hosts)
-        })
-        .catch((response) => {
-          console.log(response);
-        });
+      else if (hosts.length === 1) {
+          store.commit('setHostState', "connected");
+      } else {
+        store.commit('setHostState', "multiple");
       }
+      store.commit('setCurrentHosts', hosts);
     }
   }
+}
 </script>
 
 <style>
